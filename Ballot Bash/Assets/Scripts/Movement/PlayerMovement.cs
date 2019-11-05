@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb2d;        //Store a reference to the Rigidbody2D component required to use 2D Physics.
     public int jumpForce;
 
+    public float maxVelocity = 15; //The fastest velocity the player can reach
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +27,17 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
 
-
+        Debug.Log(rb2d.velocity.y);
 
         //Moving the Player left and right
         MovePlayer(moveHorizontal);
+
+
+        // when max velocity is reached, it cannot go higher
+        if (rb2d.velocity.y >= maxVelocity)
+        {
+            rb2d.velocity = new Vector2(rb2d.velocity.x, maxVelocity);
+        }
 
 
         //Jumping---------------------------
@@ -56,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
     void DoJump()
     {
+       
         rb2d.AddForce(Vector2.up * jumpForce);
     }
 
