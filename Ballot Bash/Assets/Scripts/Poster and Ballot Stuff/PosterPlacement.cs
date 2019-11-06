@@ -10,6 +10,7 @@ public class PosterPlacement : MonoBehaviour
     Rigidbody ballotRB;
 
     public bool inFrontOfWall = false;
+    public bool facingRight = false;
 
 
     // Start is called before the first frame update
@@ -25,15 +26,28 @@ public class PosterPlacement : MonoBehaviour
         // when p is pressed, a poster appears
         if (Input.GetKeyDown(KeyCode.P) && inFrontOfWall == true)
         {
-            Instantiate(poster, new Vector2(GameObject.FindGameObjectWithTag("Player").transform.position.x, GameObject.FindGameObjectWithTag("Player").transform.position.y / 2), transform.rotation);
+            Instantiate(poster, new Vector2(GameObject.FindGameObjectWithTag("Player").transform.position.x, GameObject.FindGameObjectWithTag("Player").transform.position.y + 2), transform.rotation);
             inFrontOfWall = false;
         }
 
-        if(Input.GetKeyDown(KeyCode.B))
+        if(Input.GetKeyDown(KeyCode.B) && facingRight == false)
         {
-            Instantiate(ballot, new Vector2(GameObject.FindGameObjectWithTag("Player").transform.position.x / 2, GameObject.FindGameObjectWithTag("Player").transform.position.y / 2), transform.rotation);
+            Instantiate(ballot, new Vector2(GameObject.FindGameObjectWithTag("Player").transform.position.x - 1, GameObject.FindGameObjectWithTag("Player").transform.position.y + 1), transform.rotation);
+        }
+        else if(Input.GetKeyDown(KeyCode.B) && facingRight == true)
+        {
+            Instantiate(ballot, new Vector2(GameObject.FindGameObjectWithTag("Player").transform.position.x + 1, GameObject.FindGameObjectWithTag("Player").transform.position.y + 1), transform.rotation);
         }
 
+
+        if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            facingRight = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            facingRight = false;
+        }
     }
 }
 
