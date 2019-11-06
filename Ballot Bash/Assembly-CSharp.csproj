@@ -62,11 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PosterWall.cs" />
     <Compile Include="Assets\Scripts\Misc\UIManager.cs" />
     <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Poster and Ballot Stuff\PosterBallotBehaviour.cs" />
     <Compile Include="Assets\Scripts\Poster and Ballot Stuff\PosterPlacement.cs" />
+    <Compile Include="Assets\Scripts\Poster and Ballot Stuff\PosterWall.cs" />
     <None Include="Assets\martin.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/008002151/Documents/GitHub/Ballot-Bash/Ballot Bash/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
