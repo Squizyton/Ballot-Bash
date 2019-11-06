@@ -30,16 +30,18 @@ public class PosterPlacement : MonoBehaviour
             inFrontOfWall = false;
         }
 
+        // throw ballot left
         if(Input.GetKeyDown(KeyCode.B) && facingRight == false)
         {
             Instantiate(ballot, new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x - 1, GameObject.FindGameObjectWithTag("Player").transform.position.y + 1, GameObject.FindGameObjectWithTag("Player").transform.position.z), transform.rotation);
         }
-        else if(Input.GetKeyDown(KeyCode.B) && facingRight == true)
+        // throw ballot right
+        else if (Input.GetKeyDown(KeyCode.B) && facingRight == true)
         {
             Instantiate(ballot, new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x + 1, GameObject.FindGameObjectWithTag("Player").transform.position.y + 1, GameObject.FindGameObjectWithTag("Player").transform.position.z), transform.rotation);
         }
 
-
+        // checks which way the player is facing
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             facingRight = true;

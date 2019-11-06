@@ -18,6 +18,8 @@ public class PosterWall : MonoBehaviour
     {
         
     }
+
+    // checks if player is in front of wall
     private void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "Player")
@@ -27,6 +29,7 @@ public class PosterWall : MonoBehaviour
 
     }
 
+    // cant place poster if not in front of wall
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
@@ -35,4 +38,6 @@ public class PosterWall : MonoBehaviour
         }
 
     }
+    
+
 }
