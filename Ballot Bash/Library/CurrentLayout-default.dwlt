@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 494}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 2560
     height: 1357
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 494}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -113,10 +113,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1307
-  m_MinSize: {x: 911, y: 444}
-  m_MaxSize: {x: 22006, y: 10022}
+  m_MinSize: {x: 917, y: 444}
+  m_MaxSize: {x: 22012, y: 10022}
   vertical: 0
-  controlID: 133
+  controlID: 31
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -303,17 +303,17 @@ MonoBehaviour:
   m_MaximizeOnPlay: 1
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 07000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 06000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -960
-    m_HBaseRangeMax: 960
-    m_VBaseRangeMin: -540
-    m_VBaseRangeMax: 540
+    m_HBaseRangeMin: -512
+    m_HBaseRangeMax: 512
+    m_VBaseRangeMin: -384
+    m_VBaseRangeMax: 384
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -333,7 +333,7 @@ MonoBehaviour:
       y: 17
       width: 1207
       height: 600
-    m_Scale: {x: 0.5555556, y: 0.5555556}
+    m_Scale: {x: 0.78125, y: 0.78125}
     m_Translation: {x: 603.5, y: 300}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -341,12 +341,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1086.2999
-      y: -540
-      width: 2172.5999
-      height: 1080
+      x: -772.48
+      y: -384
+      width: 1544.96
+      height: 768
     m_MinimalGUI: 1
-  m_defaultScale: 0.5555556
+  m_defaultScale: 0.78125
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 1207, y: 617}
@@ -390,9 +390,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: -1.7995936, y: 0.2081323, z: -1.0152855}
     speed: 2
-    m_Value: {x: -0.90003777, y: 18.395903, z: 25.516018}
+    m_Value: {x: -1.5386206, y: 0.06425458, z: -0.9381323}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -425,9 +425,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10
+    m_Target: 17.907722
     speed: 2
-    m_Value: 27.97196
+    m_Value: 17.136576
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -508,9 +508,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c22d0000
+      m_SelectedIDs: 68380000
       m_LastClickedID: 0
-      m_ExpandedIDs: 6cfaffff
+      m_ExpandedIDs: a2f8ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -573,19 +573,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/3D Models
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\008001583\Documents\GitHub\Ballot-Bash\Ballot Bash
+  m_LastProjectPath: C:\Users\008002151\Documents\GitHub\Ballot-Bash\Ballot Bash
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 00260000
     m_LastClickedID: 9728
-    m_ExpandedIDs: 00000000622e0000962e0000ac2f0000ae2f000030300000ec3100001432000080320000
+    m_ExpandedIDs: 0000000050320000843200009c3300009e3300002034000096340000de350000f2350000063600004436000078360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,7 +613,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000622e0000962e0000ac2f0000ae2f000030300000ec3100001432000080320000
+    m_ExpandedIDs: ffffffff0000000050320000843200009c3300009e3300002034000096340000de350000f2350000063600004436000078360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
