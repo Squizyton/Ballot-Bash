@@ -29,6 +29,11 @@ public class BallotBehaviour : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if(col.gameObject.tag.Equals("BallotDestroyer"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }
 

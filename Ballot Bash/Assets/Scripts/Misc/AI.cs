@@ -19,6 +19,9 @@ public class AI : MonoBehaviour
     public bool GoRight, GoLeft;
     public int Speed;
 
+    public SpriteRenderer sr;
+
+    public int DeAggro;
 
     bool facingRight;
 
@@ -51,19 +54,18 @@ public class AI : MonoBehaviour
 
                 if (GoLeft)
                 {
-
-                    if (rb.position.x != leftWP.transform.position.x)
+                    sr.flipX = true;
+                    if (transform.position.x != leftWP.transform.position.x)
                     {
-                        rb.MovePosition(transform.position + -transform.right * Time.deltaTime);
-                        
+                        transform.position = Vector3.MoveTowards(transform.position, new Vector3(leftWP.transform.position.x, this.transform.position.y, transform.position.z), Speed * Time.deltaTime);
+ 
                     }
-                    if (rb.position.x == leftWP.transform.position.x)
+                    if (transform.position.x == leftWP.transform.position.x)
                     {
                         Debug.Log("Connected");
                         GoLeft = false;
                         GoRight = true;
-                        Vector3 localScale = transform.localScale;
-                        localScale.x *= -1;
+                      
                     }
                     
                 }
@@ -71,7 +73,7 @@ public class AI : MonoBehaviour
 
                 if (GoRight)
                 {
-                        
+                    sr.flipX = false;
 
                     if (this.transform.position.x != rightWP.transform.position.x)
                     {
@@ -82,6 +84,7 @@ public class AI : MonoBehaviour
                     {
                         GoLeft = true;
                         GoRight = false;
+
                     }
                 }
 
@@ -93,10 +96,19 @@ public class AI : MonoBehaviour
 
             case State.chase:
 
+                transform.position = Vector3.MoveTowards(transform.position, new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x, this.transform.position.y, transform.position.z), Speed * Time.deltaTime);
+
+                if (GameObject.FindGameObjectWithTag("Player").transform.position.x > this.transform.position.x)
+                {
+                    sr.flipX = false;
+                }
+                else
+                {
+                    sr.flipX = true;
+                }
 
 
-             
-                if (distanceBetween > 5)
+                if (distanceBetween > DeAggro)
                 {
                     state = State.wander;
                 }

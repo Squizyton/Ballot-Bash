@@ -29,6 +29,7 @@ public class PosterBehaviour : MonoBehaviour
 
             //counts number of people converted to voters
             Destroy(gameObject);
+            Destroy(col.gameObject);
         }
 
     }
