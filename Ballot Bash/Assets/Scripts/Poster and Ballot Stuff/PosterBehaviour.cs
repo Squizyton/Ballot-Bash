@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PosterBallotBehaviour : MonoBehaviour
-
+public class PosterBehaviour : MonoBehaviour
 {
-    public int maxConverted = 1;
-    public GameObject voter;
-    public GameObject nonVoter;
+    public GameObject scoreManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        scoreManager = GameObject.FindGameObjectWithTag("Score");
     }
 
     // Update is called once per frame
@@ -23,13 +20,16 @@ public class PosterBallotBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.Equals("NonVoter")) 
+        if (col.gameObject.tag.Equals("NonVoter"))
         {
             //convert the non voter to a voter
             // nothing is here yet
 
+            scoreManager.GetComponent<ScoreManager>().posterPeople++;
+
             //counts number of people converted to voters
             Destroy(gameObject);
         }
+
     }
 }
