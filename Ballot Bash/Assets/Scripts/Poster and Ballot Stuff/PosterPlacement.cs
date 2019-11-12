@@ -26,7 +26,7 @@ public class PosterPlacement : MonoBehaviour
         // when p is pressed, a poster appears
         if (Input.GetKeyDown(KeyCode.P) && inFrontOfWall == true)
         {
-            Instantiate(poster, new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x, GameObject.FindGameObjectWithTag("Player").transform.position.y + 2, GameObject.FindGameObjectWithTag("Player").transform.position.z), transform.rotation);
+            Instantiate(poster, new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x, GameObject.FindGameObjectWithTag("Player").transform.position.y + 2 , GameObject.FindGameObjectWithTag("Player").transform.position.z), transform.rotation);
             inFrontOfWall = false;
         }
 

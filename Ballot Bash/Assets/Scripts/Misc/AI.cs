@@ -33,14 +33,16 @@ public class AI : MonoBehaviour
 
         Debug.Log(distanceBetween);
 
-        if(distanceBetween <= aggroRange)
-        {
-            state = State.chase;
-        }
 
         switch (state)
         {
             case State.wander:
+
+
+                if (distanceBetween <= aggroRange)
+                {
+                    state = State.chase;
+                }
 
                 if (GoLeft)
                 {
@@ -78,8 +80,15 @@ public class AI : MonoBehaviour
 
 
             case State.chase:
+
+
               transform.position = Vector3.MoveTowards(transform.position, new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x, 
-                  this.transform.position.y, transform.position.z), Speed * Time.deltaTime * 3);
+                  this.transform.position.y, transform.position.z), Speed * Time.deltaTime * 2);
+
+                if (distanceBetween > 5)
+                {
+                    state = State.wander;
+                }
 
                 break;
 

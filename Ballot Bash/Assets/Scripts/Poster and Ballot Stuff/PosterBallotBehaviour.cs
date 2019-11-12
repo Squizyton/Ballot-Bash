@@ -23,7 +23,7 @@ public class PosterBallotBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "Player")
+        if (col.gameObject.Equals("NonVoter")) 
         {
             //convert the non voter to a voter
             // nothing is here yet
