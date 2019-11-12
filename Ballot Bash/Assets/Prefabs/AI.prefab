@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4877318923418791960}
   m_Layer: 0
   m_Name: AI
-  m_TagString: Untagged
+  m_TagString: NonVoter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,4 +146,7 @@ MonoBehaviour:
   leftWP: {fileID: 7557757334251850073, guid: 22c1d59d5ba14b541809c11bfa5f90e6, type: 3}
   rightWP: {fileID: 3827526336926167145, guid: 98c57c4492fcaf24da91d810d94766a8, type: 3}
   DistanceOfWayPoints: 4
+  aggroRange: 0
+  GoRight: 0
+  GoLeft: 0
   Speed: 1
