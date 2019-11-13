@@ -38,16 +38,16 @@ public class AI : MonoBehaviour
     {
        
         float distanceBetween = GameObject.FindGameObjectWithTag("Player").transform.position.x - this.transform.position.x;
-
+        float HeightDistance = GameObject.FindGameObjectWithTag("Player").transform.position.y - this.transform.position.y;
         //Debug.Log(distanceBetween);
-       
+
 
         switch (state)
         {
             case State.wander:
 
 
-                if (distanceBetween <= aggroRange)
+                if (distanceBetween <= aggroRange && HeightDistance <= aggroRange)
                 {
                     state = State.chase;
                 }
@@ -108,19 +108,12 @@ public class AI : MonoBehaviour
                 }
 
 
-                if (distanceBetween > DeAggro)
+                if (distanceBetween > DeAggro || HeightDistance > DeAggro)
                 {
                     state = State.wander;
                 }
-
                 break;
-
-
-         
-
         }
-
-
      //   Debug.Log(transform.right);
     }
 

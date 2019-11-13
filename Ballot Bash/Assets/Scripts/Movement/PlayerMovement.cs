@@ -12,7 +12,9 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb2d;        //Store a reference to the Rigidbody2D component required to use 2D Physics.
     public int jumpForce;
-
+    public int WallForce;
+    
+    public bool FacingRight, InWall;
     public float maxVelocity = 15; //The fastest velocity the player can reach
 
 
@@ -43,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         //Jumping---------------------------
         if (rb2d.velocity.y == 0 || wallJumpAllowed)
         {
+            //rb2d.velocity = new Vector2(0, 0);
             jumpAllowed = true;
         }
         else
@@ -59,14 +62,46 @@ public class PlayerMovement : MonoBehaviour
     void MovePlayer(float h)
     {
          transform.Translate(new Vector2 (h,0) * Time.deltaTime * speed);
-       // rb2d.AddForce(Vector2.left * h);
+        FlipPlayer(h);
     
+    }
+
+    void FlipPlayer(float h)
+    {
+
+        if (h > 0)
+        {
+            FacingRight = true;
+            this.GetComponent<SpriteRenderer>().flipX = false;
+            
+        }
+        else if (h < 0)
+        {
+            FacingRight = false;
+            this.GetComponent<SpriteRenderer>().flipX = true;
+        }
+
+
+
     }
 
     void DoJump()
     {
-       
         rb2d.AddForce(Vector2.up * jumpForce);
+
+       // if (InWall)
+       // {
+       //     if (FacingRight)
+       //     {     
+       //         rb2d.AddForce(Vector2.left * WallForce);
+       //     }
+       //     else if (!FacingRight)
+       //     {
+       //         
+       //         rb2d.AddForce(Vector2.right * WallForce);
+       //     }
+       // }
+       //
     }
 
 
@@ -76,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (col.gameObject.tag.Equals("Wall"))
             {
-
+                InWall = true;
                 MovePlayer(0);
                 wallJumpAllowed = true;
             }
@@ -89,6 +124,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (col.gameObject.tag.Equals("Wall"))
         {
+            InWall = false;
             wallJumpAllowed = false;
         }
 
