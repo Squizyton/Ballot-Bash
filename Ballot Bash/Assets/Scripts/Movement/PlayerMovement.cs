@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
 
-        Debug.Log(rb2d.velocity.y);
+       // Debug.Log(rb2d.velocity.y);
 
         //Moving the Player left and right
         MovePlayer(moveHorizontal);
