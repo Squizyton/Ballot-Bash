@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
 
@@ -44,6 +45,12 @@ public class UIManager : MonoBehaviour
             scoreText.GetComponent<Text>().text = "0" + peopleConverted.ToString();
         }
 
+        if (t <= 0)
+        {
+            t = 0;
+            SceneManager.LoadScene(1);
+        }
+
     }
     void TimerCountUp()
     {
@@ -65,5 +72,6 @@ public class UIManager : MonoBehaviour
         string seconds = (t % 60).ToString("f2");
 
         timerText.text = minutes + ":" + seconds;
+
     }
 }
