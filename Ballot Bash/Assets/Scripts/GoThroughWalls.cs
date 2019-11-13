@@ -5,7 +5,7 @@ using UnityEngine;
 public class GoThroughWalls : MonoBehaviour
 {
     public GameObject player;
-    public GameObject parentPlatform;
+   // public GameObject parentPlatform;
     public BoxCollider2D parentCollider;
     public BoxCollider2D playerCollider;
 
