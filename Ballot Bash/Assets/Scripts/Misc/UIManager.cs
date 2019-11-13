@@ -6,15 +6,22 @@ public class UIManager : MonoBehaviour
 {
 
     public Text timerText;
+    public Text scoreText;
 
+    public GameObject scoreManager;
+    public int peopleConverted;
     
-    private float Timer;
+    public float Timer;
 
+    public bool CountUp, CountDown;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (CountUp)
+        {
+            Timer = 0;
+        }
 
 
     }
@@ -22,11 +29,41 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float t = Time.time - Timer;
+        float t = Timer - Time.time ;
 
 
-        string minutes = ((int)t / 60).ToString(); 
+        string minutes = ((int)t / 60).ToString();
+        string seconds = (t % 60).ToString("f2");
+
+        timerText.text = minutes + ":" + seconds;
+
+        peopleConverted = scoreManager.GetComponent<ScoreManager>().ballotPeople + scoreManager.GetComponent<ScoreManager>().posterPeople;
+        scoreText.GetComponent<Text>().text = peopleConverted.ToString();
+        if(peopleConverted < 10)
+        {
+            scoreText.GetComponent<Text>().text = "0" + peopleConverted.ToString();
+        }
+
+    }
+    void TimerCountUp()
+    {
+        float t = Timer - Time.time;
 
 
+        string minutes = ((int)t / 60).ToString();
+        string seconds = (t % 60).ToString("f2");
+
+        timerText.text = minutes + ":" + seconds;
+    }
+
+    void TimerCountDown()
+    {
+        float t = Timer - Time.time;
+
+
+        string minutes = ((int)t / 60).ToString();
+        string seconds = (t % 60).ToString("f2");
+
+        timerText.text = minutes + ":" + seconds;
     }
 }
