@@ -625,7 +625,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PosterWall.cs" />
     <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Poster and Ballot Stuff\PosterBallotBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Poster and Ballot Stuff\PosterPlacement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\martin.txt" />
