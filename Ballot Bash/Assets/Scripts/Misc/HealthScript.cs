@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthScript : MonoBehaviour
 {
@@ -25,5 +26,36 @@ public class HealthScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag.Equals("NonVoter"))
+        {
+            health--;
+
+           if(health == 2)
+            {
+                fullHealth.SetActive(false);
+            }
+           else if(health == 1)
+            {
+                fullHealth.SetActive(false);
+                twoHealth.SetActive(false);
+            }
+           else if(health == 0)
+            {
+                fullHealth.SetActive(false);
+                twoHealth.SetActive(false);
+                oneHealth.SetActive(false);
+            }
+
+
+           else if(health < 0)
+            {
+                SceneManager.LoadScene(1);
+            }
+
+        }
     }
 }

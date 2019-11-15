@@ -31,16 +31,23 @@ public class GoThroughWalls : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        var platform = transform.parent;
-        Physics2D.IgnoreCollision(playerCollider, parentCollider);
+        if (col.gameObject.tag.Equals("Player"))
+        {
+            var platform = transform.parent;
+            Physics2D.IgnoreCollision(playerCollider, parentCollider);
+        }
+        
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        player.gameObject.layer = 0;
+        if (col.gameObject.tag.Equals("Player"))
+        {
+            player.gameObject.layer = 0;
 
-        var platform = transform.parent;
-        Physics2D.IgnoreCollision(playerCollider, parentCollider, false);
+            var platform = transform.parent;
+            Physics2D.IgnoreCollision(playerCollider, parentCollider, false);
+        }
     }
 
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4877318923418791962}
   - component: {fileID: 4877318923418791963}
   - component: {fileID: 4877318923418791960}
+  - component: {fileID: 1066729840}
   m_Layer: 0
   m_Name: AI
   m_TagString: NonVoter
@@ -153,3 +154,29 @@ MonoBehaviour:
   Speed: 1
   sr: {fileID: 4877318923418791965}
   DeAggro: 7
+--- !u!61 &1066729840
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877318923418791974}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.022980452, y: 0.31585646}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 2.4, y: 2.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.4605126, y: 4.7277937}
+  m_EdgeRadius: 0

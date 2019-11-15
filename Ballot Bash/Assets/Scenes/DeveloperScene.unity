@@ -3308,6 +3308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   posterPeople: 0
   ballotPeople: 0
+  maxPeople: 13
 --- !u!4 &815842469
 Transform:
   m_ObjectHideFlags: 0
@@ -3525,11 +3526,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bob
       objectReference: {fileID: 0}
-    - target: {fileID: 7148516282015256069, guid: ae4063d34da4b7248832b437e9a932b8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7148516282015256121, guid: ae4063d34da4b7248832b437e9a932b8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3584,26 +3580,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7148516282015256071, guid: ae4063d34da4b7248832b437e9a932b8,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7148516282015256071, guid: ae4063d34da4b7248832b437e9a932b8,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 2.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7148516282015256068, guid: ae4063d34da4b7248832b437e9a932b8,
-        type: 3}
-      propertyPath: jumpForce
-      value: 1250
-      objectReference: {fileID: 0}
-    - target: {fileID: 7148516282015256068, guid: ae4063d34da4b7248832b437e9a932b8,
-        type: 3}
-      propertyPath: WallForce
-      value: 350
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae4063d34da4b7248832b437e9a932b8, type: 3}
