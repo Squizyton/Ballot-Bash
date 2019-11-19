@@ -10,64 +10,90 @@ public class AI : MonoBehaviour
     public enum State { wander, chase }
     public State state;
 
-    public GameObject leftWP, rightWP;
+    public GameObject SpawnleftWP, SpawnrightWP;
     public int DistanceOfWayPoints;
+    public GameObject LeftWP, RightWP;
+
     public int aggroRange;
+
+    public Rigidbody2D rb;
 
     public bool GoRight, GoLeft;
     public int Speed;
 
+    public SpriteRenderer sr;
+
+    public int DeAggro;
+
+    bool facingRight;
+
     void Start()
     {
         GoLeft = true;
-        Instantiate(leftWP, new Vector3(this.transform.position.x - DistanceOfWayPoints, this.transform.position.y, this.transform.position.z), transform.rotation);
-        Instantiate(rightWP, new Vector3(this.transform.position.x + DistanceOfWayPoints, this.transform.position.y, this.transform.position.z), transform.rotation);
-
+        LeftWP = Instantiate(SpawnleftWP, new Vector3(this.transform.position.x - DistanceOfWayPoints, this.transform.position.y, this.transform.position.z), transform.rotation);
+       RightWP = Instantiate(SpawnrightWP, new Vector3(this.transform.position.x + DistanceOfWayPoints, this.transform.position.y, this.transform.position.z), transform.rotation);
+        rb = this.GetComponent<Rigidbody2D>();
+        Debug.Log("Right Waypoint : " + RightWP.transform.position + "Left Waypoint: " + LeftWP.transform.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+       
         float distanceBetween = GameObject.FindGameObjectWithTag("Player").transform.position.x - this.transform.position.x;
+        distanceBetween = Mathf.Abs(distanceBetween);
 
-        Debug.Log(distanceBetween);
+        //Debug.Log(distanceBetween);
+        float HeightDistance = GameObject.FindGameObjectWithTag("Player").transform.position.y - this.transform.position.y;
+        //Debug.Log(distanceBetween);
 
-        if(distanceBetween <= aggroRange)
-        {
-            state = State.chase;
-        }
 
         switch (state)
         {
             case State.wander:
 
+
+                if (distanceBetween <= aggroRange && HeightDistance <= aggroRange)
+                {
+                    state = State.chase;
+                }
+
                 if (GoLeft)
                 {
-                    if (this.transform.position.x != leftWP.transform.position.x)
-                    {
+                    sr.flipX = true;
 
-                        transform.position = Vector3.MoveTowards(transform.position, new Vector3(leftWP.transform.position.x, this.transform.position.y, transform.position.z), Speed * Time.deltaTime);
-                    }
-                    if (this.transform.position.x == leftWP.transform.position.x)
+                    
+                    if (transform.position.x != LeftWP.transform.position.x)
+
                     {
+                        transform.position = Vector3.MoveTowards(transform.position, new Vector3(LeftWP.transform.position.x, this.transform.position.y, transform.position.z), Speed * Time.deltaTime);
+ 
+                    }
+                    if (transform.position.x == LeftWP.transform.position.x)
+                    {
+                        Debug.Log("Connected");
                         GoLeft = false;
                         GoRight = true;
+                      
                     }
-
+                    
                 }
 
 
                 if (GoRight)
                 {
-                    if (this.transform.position.x != rightWP.transform.position.x)
+                    sr.flipX = false;
+
+                    if (this.transform.position.x != RightWP.transform.position.x)
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, new Vector3(rightWP.transform.position.x, this.transform.position.y, transform.position.z), Speed * Time.deltaTime);
+                        transform.position = Vector3.MoveTowards(transform.position, new Vector3(RightWP.transform.position.x, this.transform.position.y, transform.position.z), Speed * Time.deltaTime);
+                        
                     }
-                    if (this.transform.position.x == rightWP.transform.position.x)
+                    if (this.transform.position.x == RightWP.transform.position.x)
                     {
                         GoLeft = true;
                         GoRight = false;
+
                     }
                 }
 
@@ -78,17 +104,26 @@ public class AI : MonoBehaviour
 
 
             case State.chase:
-              transform.position = Vector3.MoveTowards(transform.position, new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x, 
-                  this.transform.position.y, transform.position.z), Speed * Time.deltaTime * 3);
 
+                transform.position = Vector3.MoveTowards(transform.position, new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x, this.transform.position.y, transform.position.z), Speed * Time.deltaTime);
+
+                if (GameObject.FindGameObjectWithTag("Player").transform.position.x > this.transform.position.x)
+                {
+                    sr.flipX = false;
+                }
+                else
+                {
+                    sr.flipX = true;
+                }
+
+
+                if (distanceBetween > DeAggro || HeightDistance > DeAggro)
+                {
+                   state = State.wander;
+                }
                 break;
-
         }
+     //   Debug.Log(transform.right);
     }
 
-
-    void MoveDude(int i)
-    {
-        transform.Translate(new Vector2(i, 0) * Time.deltaTime * Speed);
-    }
 }
