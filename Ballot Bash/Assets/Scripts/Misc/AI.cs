@@ -10,8 +10,10 @@ public class AI : MonoBehaviour
     public enum State { wander, chase }
     public State state;
 
-    public GameObject leftWP, rightWP;
+    public GameObject SpawnleftWP, SpawnrightWP;
     public int DistanceOfWayPoints;
+    public GameObject LeftWP, RightWP;
+
     public int aggroRange;
 
     public Rigidbody2D rb;
@@ -28,9 +30,10 @@ public class AI : MonoBehaviour
     void Start()
     {
         GoLeft = true;
-        Instantiate(leftWP, new Vector3(this.transform.position.x - DistanceOfWayPoints, this.transform.position.y, this.transform.position.z), transform.rotation);
-        Instantiate(rightWP, new Vector3(this.transform.position.x + DistanceOfWayPoints, this.transform.position.y, this.transform.position.z), transform.rotation);
+        LeftWP = Instantiate(SpawnleftWP, new Vector3(this.transform.position.x - DistanceOfWayPoints, this.transform.position.y, this.transform.position.z), transform.rotation);
+       RightWP = Instantiate(SpawnrightWP, new Vector3(this.transform.position.x + DistanceOfWayPoints, this.transform.position.y, this.transform.position.z), transform.rotation);
         rb = this.GetComponent<Rigidbody2D>();
+        Debug.Log("Right Waypoint : " + RightWP.transform.position + "Left Waypoint: " + LeftWP.transform.position);
     }
 
     // Update is called once per frame
@@ -38,6 +41,9 @@ public class AI : MonoBehaviour
     {
        
         float distanceBetween = GameObject.FindGameObjectWithTag("Player").transform.position.x - this.transform.position.x;
+        distanceBetween = Mathf.Abs(distanceBetween);
+
+        //Debug.Log(distanceBetween);
         float HeightDistance = GameObject.FindGameObjectWithTag("Player").transform.position.y - this.transform.position.y;
         //Debug.Log(distanceBetween);
 
@@ -55,12 +61,15 @@ public class AI : MonoBehaviour
                 if (GoLeft)
                 {
                     sr.flipX = true;
-                    if (transform.position.x != leftWP.transform.position.x)
+
+                    
+                    if (transform.position.x != LeftWP.transform.position.x)
+
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, new Vector3(leftWP.transform.position.x, this.transform.position.y, transform.position.z), Speed * Time.deltaTime);
+                        transform.position = Vector3.MoveTowards(transform.position, new Vector3(LeftWP.transform.position.x, this.transform.position.y, transform.position.z), Speed * Time.deltaTime);
  
                     }
-                    if (transform.position.x == leftWP.transform.position.x)
+                    if (transform.position.x == LeftWP.transform.position.x)
                     {
                         Debug.Log("Connected");
                         GoLeft = false;
@@ -75,12 +84,12 @@ public class AI : MonoBehaviour
                 {
                     sr.flipX = false;
 
-                    if (this.transform.position.x != rightWP.transform.position.x)
+                    if (this.transform.position.x != RightWP.transform.position.x)
                     {
-                        transform.position = Vector3.MoveTowards(transform.position, new Vector3(rightWP.transform.position.x, this.transform.position.y, transform.position.z), Speed * Time.deltaTime);
+                        transform.position = Vector3.MoveTowards(transform.position, new Vector3(RightWP.transform.position.x, this.transform.position.y, transform.position.z), Speed * Time.deltaTime);
                         
                     }
-                    if (this.transform.position.x == rightWP.transform.position.x)
+                    if (this.transform.position.x == RightWP.transform.position.x)
                     {
                         GoLeft = true;
                         GoRight = false;
@@ -110,7 +119,7 @@ public class AI : MonoBehaviour
 
                 if (distanceBetween > DeAggro || HeightDistance > DeAggro)
                 {
-                    state = State.wander;
+                   state = State.wander;
                 }
                 break;
         }

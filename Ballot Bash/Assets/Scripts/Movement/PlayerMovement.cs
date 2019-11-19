@@ -16,11 +16,14 @@ public class PlayerMovement : MonoBehaviour
     
     public bool FacingRight, InWall;
     public float maxVelocity = 15; //The fastest velocity the player can reach
+    public float maxXVelocity;
 
 
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
+        anim = this.GetComponent<Animator>();
         rb2d = this.GetComponent<Rigidbody2D>();
     }
 
@@ -39,12 +42,17 @@ public class PlayerMovement : MonoBehaviour
         if (rb2d.velocity.y >= maxVelocity)
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, maxVelocity);
+        }if(rb2d.velocity.x <= -maxXVelocity || rb2d.velocity.x >= maxXVelocity)
+        {
+            rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+
         }
 
 
         //Jumping---------------------------
         if (rb2d.velocity.y == 0 || wallJumpAllowed)
         {
+            anim.SetBool("jumping", false);
             //rb2d.velocity = new Vector2(0, 0);
             jumpAllowed = true;
         }
@@ -63,6 +71,11 @@ public class PlayerMovement : MonoBehaviour
     {
          transform.Translate(new Vector2 (h,0) * Time.deltaTime * speed);
         FlipPlayer(h);
+        anim.SetBool("walking", true);
+        if (h == 0)
+        {
+            anim.SetBool("walking", false);
+        }
     
     }
 
@@ -87,21 +100,24 @@ public class PlayerMovement : MonoBehaviour
 
     void DoJump()
     {
+        anim.SetBool("walking", false);
+        anim.SetBool("jumping", true);
         rb2d.AddForce(Vector2.up * jumpForce);
 
-       // if (InWall)
-       // {
-       //     if (FacingRight)
-       //     {     
-       //         rb2d.AddForce(Vector2.left * WallForce);
-       //     }
-       //     else if (!FacingRight)
-       //     {
-       //         
-       //         rb2d.AddForce(Vector2.right * WallForce);
-       //     }
-       // }
-       //
+        if (InWall)
+        {
+            if (FacingRight)
+            {     
+                rb2d.AddForce(Vector2.left * WallForce);
+                Debug.Log(rb2d.velocity.x);
+            }
+            else if (!FacingRight)
+            {
+                Debug.Log(rb2d.velocity.x);
+                rb2d.AddForce(Vector2.right * WallForce);
+            }
+        }
+       
     }
 
 

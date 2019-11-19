@@ -126,6 +126,7 @@ MonoBehaviour:
   FacingRight: 0
   InWall: 0
   maxVelocity: 15
+  maxXVelocity: 0
 --- !u!114 &7148516282015256123
 MonoBehaviour:
   m_ObjectHideFlags: 0

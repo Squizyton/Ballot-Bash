@@ -24,8 +24,9 @@ public class BallotBehaviour : MonoBehaviour
 
         if(col.gameObject.tag.Equals("Voter"))
         {
+            col.GetComponent<Animator>().SetBool("hurray", true);
+          
             scoreManager.GetComponent<ScoreManager>().ballotPeople++;
-            Destroy(col.gameObject);
             Destroy(gameObject);
         }
 
