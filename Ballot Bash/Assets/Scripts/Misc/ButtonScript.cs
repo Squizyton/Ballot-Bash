@@ -3,15 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ScoreManager : MonoBehaviour
+public class ButtonScript : MonoBehaviour
 {
     // Start is called before the first frame update
-
-   public int posterPeople = 0;
-   public int ballotPeople = 0;
-
-    public int maxPeople = 13;
-
     void Start()
     {
         
@@ -20,9 +14,22 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ballotPeople == maxPeople)
-        {
-            SceneManager.LoadScene(2);
-        }
+        
     }
+
+    public void Play()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+   public void Menu()
+    {
+        // menu doesnt exist yet
+    }
+
 }
