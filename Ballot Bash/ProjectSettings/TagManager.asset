@@ -10,6 +10,7 @@ TagManager:
   - Score
   - BallotDestroyer
   - Voter
+  - Canvas
   layers:
   - Default
   - TransparentFX

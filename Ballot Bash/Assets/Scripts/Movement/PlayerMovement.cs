@@ -131,10 +131,11 @@ public class PlayerMovement : MonoBehaviour
                 MovePlayer(0);
                 wallJumpAllowed = true;
             }
+
         }
+
     
     }
-
 
     void OnCollisionExit2D(Collision2D col)
     {
@@ -144,6 +145,27 @@ public class PlayerMovement : MonoBehaviour
             wallJumpAllowed = false;
         }
 
+    }
+
+    //Triggers
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag.Equals("Voter"))
+        {
+            Debug.Log("Sentencing");
+            col.gameObject.GetComponent<Conversation>().DisplayNPCSentence();
+        }
+    }
+
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+
+        if (col.gameObject.tag.Equals("Voter"))
+        {
+
+            col.gameObject.GetComponent<Conversation>().PlayerLeft();
+        }
     }
 
 
