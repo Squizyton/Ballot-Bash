@@ -6,11 +6,13 @@ public class BallotBehaviour : MonoBehaviour
 {
 
     public GameObject scoreManager;
+    public GameObject health;
 
     // Start is called before the first frame update
     void Start()
     {
         scoreManager = GameObject.FindGameObjectWithTag("Score");
+        health = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class BallotBehaviour : MonoBehaviour
             col.GetComponent<Animator>().SetBool("hurray", true);
           
             scoreManager.GetComponent<ScoreManager>().ballotPeople++;
+            health.GetComponent<HealthScript>().health++;
             Destroy(gameObject);
         }
 

@@ -25,6 +25,24 @@ public class HealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(health > 3)
+        {
+            health = 3;
+        }
+
+        if(health == 3)
+        {
+            fullHealth.SetActive(true);
+        }
+        else if(health == 2)
+        {
+            twoHealth.SetActive(true);
+        }
+        else if(health == 1)
+        {
+            oneHealth.SetActive(true);
+        }
         
     }
 
