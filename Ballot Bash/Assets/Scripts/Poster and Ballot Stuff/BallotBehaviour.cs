@@ -26,11 +26,14 @@ public class BallotBehaviour : MonoBehaviour
 
         if(col.gameObject.tag.Equals("Voter"))
         {
-            col.GetComponent<Animator>().SetBool("hurray", true);
+           col.GetComponent<Animator>().SetBool("hurray", true);
           
             scoreManager.GetComponent<ScoreManager>().ballotPeople++;
             health.GetComponent<HealthScript>().health++;
-            Destroy(gameObject);
+            col.gameObject.GetComponent<Conversation>().DisplayPlayerSentence();
+            col.gameObject.GetComponent<Conversation>().gotBallot = true;
+
+         //   Destroy(gameObject);
         }
 
         if(col.gameObject.tag.Equals("BallotDestroyer"))
