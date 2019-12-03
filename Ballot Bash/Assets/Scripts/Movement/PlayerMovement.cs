@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     Animator anim;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -163,11 +165,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (col.gameObject.tag.Equals("Voter"))
         {
-
-            col.gameObject.GetComponent<Conversation>().PlayerLeft();
+              col.gameObject.GetComponent<Conversation>().PlayerLeft();
         }
     }
-
-
-
 }
