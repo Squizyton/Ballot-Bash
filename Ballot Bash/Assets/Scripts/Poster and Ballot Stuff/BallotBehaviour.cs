@@ -33,7 +33,7 @@ public class BallotBehaviour : MonoBehaviour
             col.gameObject.GetComponent<Conversation>().DisplayPlayerSentence();
             col.gameObject.GetComponent<Conversation>().gotBallot = true;
 
-         //   Destroy(gameObject);
+            Destroy(gameObject);
         }
 
         if(col.gameObject.tag.Equals("BallotDestroyer"))
