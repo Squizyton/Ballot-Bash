@@ -30,7 +30,7 @@ public class Conversation : MonoBehaviour
         NPCTextBox = Instantiate(SpawnNPCTextBox, GameObject.FindGameObjectWithTag("Canvas").transform, false);
         NPCTextBox.name = this.gameObject.name + "'s dialouge box";
 
-        playerTextbox = GameObject.Find("PlayerTextBox");
+      ///  playerTextbox = GameObject.Find("PlayerTextBox");
 
         if (BlueNPC)
         {

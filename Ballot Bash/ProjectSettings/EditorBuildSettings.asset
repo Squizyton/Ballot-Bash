@@ -9,15 +9,12 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/VideoLeve.unity
-    guid: c26e410c3214f9d4eac883c6b04a41c0
-  - enabled: 1
     path: Assets/Scenes/LoseScene.unity
     guid: f2846ec2ec26c8f439a82e4afd25147b
   - enabled: 1
     path: Assets/Scenes/WinScene.unity
     guid: b8abb17be5cee454bb0f8d849ed5005e
   - enabled: 1
-    path: Assets/Scenes/DeveloperScene.unity
-    guid: cb6a8d9f5b66b004681a2acef2697e5b
+    path: Assets/Scenes/Level.unity
+    guid: bd00f49cee170ad479e60752da167265
   m_configObjects: {}

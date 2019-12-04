@@ -19,7 +19,7 @@ public class ButtonScript : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("Level");
     }
 
     public void Quit()

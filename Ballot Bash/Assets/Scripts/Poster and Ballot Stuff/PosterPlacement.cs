@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PosterPlacement : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PosterPlacement : MonoBehaviour
 
     public bool inFrontOfWall = false;
     public bool facingRight = true;
+    public bool inTutorial = false;
 
 
     // Start is called before the first frame update
