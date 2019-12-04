@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Misc\Conversation.cs" />
     <Compile Include="Assets\Scripts\Misc\DestroyNPC.cs" />
     <Compile Include="Assets\Scripts\Misc\HealthScript.cs" />
+    <Compile Include="Assets\Scripts\Misc\PlatformUpDown.cs" />
     <Compile Include="Assets\Scripts\Misc\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Misc\SpawnACar.cs" />
     <Compile Include="Assets\Scripts\Misc\UIManager.cs" />

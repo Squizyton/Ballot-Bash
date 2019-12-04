@@ -11,12 +11,13 @@ public class PosterPlacement : MonoBehaviour
 
     public bool inFrontOfWall = false;
     public bool facingRight = true;
-
+    public AudioSource ass;
+    public AudioClip[] effects;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        ass = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,19 +27,27 @@ public class PosterPlacement : MonoBehaviour
         // when p is pressed, a poster appears
         if (Input.GetKeyDown(KeyCode.P) && inFrontOfWall == true)
         {
+
             Instantiate(poster, new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x, GameObject.FindGameObjectWithTag("Player").transform.position.y + 1 , GameObject.FindGameObjectWithTag("Player").transform.position.z), transform.rotation);
             inFrontOfWall = false;
+            ass.clip = effects[0];
+            ass.Play();
         }
 
         // throw ballot left
         if(Input.GetKeyDown(KeyCode.B) && facingRight == false)
         {
+
             Instantiate(ballot, new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x - 1, GameObject.FindGameObjectWithTag("Player").transform.position.y + 1, GameObject.FindGameObjectWithTag("Player").transform.position.z), transform.rotation);
+            ass.clip = effects[1];
+            ass.Play();
         }
         // throw ballot right
         else if (Input.GetKeyDown(KeyCode.B) && facingRight == true)
         {
             Instantiate(ballot, new Vector3(GameObject.FindGameObjectWithTag("Player").transform.position.x + 1, GameObject.FindGameObjectWithTag("Player").transform.position.y + 1, GameObject.FindGameObjectWithTag("Player").transform.position.z), transform.rotation);
+            ass.clip = effects[1];
+            ass.Play();
         }
 
         // checks which way the player is facing
