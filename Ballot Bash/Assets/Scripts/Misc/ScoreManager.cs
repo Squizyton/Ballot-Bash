@@ -22,7 +22,7 @@ public class ScoreManager : MonoBehaviour
     {
         if(ballotPeople == maxPeople)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("WinScene");
         }
     }
 }

@@ -19,9 +19,6 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: 0
-      value: {fileID: 8459219355667101991, guid: 4edd641a604f8e8458f8ce6317180941,
-        type: 3}
     - time: 0.083333336
       value: {fileID: 400584692795258816, guid: 4edd641a604f8e8458f8ce6317180941,
         type: 3}
@@ -62,7 +59,6 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 8459219355667101991, guid: 4edd641a604f8e8458f8ce6317180941, type: 3}
     - {fileID: 400584692795258816, guid: 4edd641a604f8e8458f8ce6317180941, type: 3}
     - {fileID: -696014882698011605, guid: 4edd641a604f8e8458f8ce6317180941, type: 3}
     - {fileID: 2504307468595694833, guid: 4edd641a604f8e8458f8ce6317180941, type: 3}
@@ -75,7 +71,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6666667
+    m_StopTime: 0.6666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -94,11 +90,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.6666667
-    functionName: DestroyGameObject
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

@@ -18,11 +18,17 @@ public class PlayerMovement : MonoBehaviour
     public float maxVelocity = 15; //The fastest velocity the player can reach
     public float maxXVelocity;
 
+    public AudioSource ass;
+
 
     Animator anim;
+
+    
     // Start is called before the first frame update
     void Start()
     {
+
+        ass = this.GetComponent<AudioSource>();
         anim = this.GetComponent<Animator>();
         rb2d = this.GetComponent<Rigidbody2D>();
     }
@@ -117,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
                 rb2d.AddForce(Vector2.right * WallForce);
             }
         }
-       
+        ass.Play();
     }
 
 
@@ -163,11 +169,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (col.gameObject.tag.Equals("Voter"))
         {
-
-            col.gameObject.GetComponent<Conversation>().PlayerLeft();
+              col.gameObject.GetComponent<Conversation>().PlayerLeft();
         }
     }
-
-
-
 }

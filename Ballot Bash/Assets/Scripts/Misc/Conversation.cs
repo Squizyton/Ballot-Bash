@@ -10,7 +10,7 @@ public class Conversation : MonoBehaviour
     public string[] NPC_sentences;
 
     [TextArea(3, 2)]
-    public string[] PlayerSentences;
+    public string PlayerSentences;
 
     public GameObject SpawnNPCTextBox;
     public GameObject NPCTextBox;
@@ -20,16 +20,21 @@ public class Conversation : MonoBehaviour
 
     public int sentenceNumber;
 
+    public Sprite blueHead, greenHead;
+
+    //THIS WILL MANUALLY HAVE TO BE SET
+    public bool onGround, gotBallot;
+
     private void Start()
     {
-        NPCTextBox = Instantiate(SpawnNPCTextBox, GameObject.FindGameObjectWithTag("Canvas").transform,false);
+        NPCTextBox = Instantiate(SpawnNPCTextBox, GameObject.FindGameObjectWithTag("Canvas").transform, false);
         NPCTextBox.name = this.gameObject.name + "'s dialouge box";
-        
 
+      ///  playerTextbox = GameObject.Find("PlayerTextBox");
 
         if (BlueNPC)
         {
-            NPCTextBox.GetComponent<UnityEngine.UI.Image>().color = Color.blue;
+            NPCTextBox.transform.GetChild(1).GetComponent<UnityEngine.UI.Image>().sprite = blueHead;
         }
 
         if (RedNPC)
@@ -38,6 +43,7 @@ public class Conversation : MonoBehaviour
 
         }
         NPCTextBox.SetActive(false);
+        playerTextbox.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,12 +54,6 @@ public class Conversation : MonoBehaviour
 
        public void DisplayNPCSentence()
     {
-       
-      // if (playerTextbox.activeSelf.Equals(true))
-      // {
-      //     playerTextbox.SetActive(false);
-      // }
-
         if (NPCTextBox.activeSelf != true)
         {
             NPCTextBox.SetActive(true);
@@ -65,13 +65,31 @@ public class Conversation : MonoBehaviour
 
 
 
-    void DisplayPlayerSentence()
+   public void DisplayPlayerSentence()
     {
+        if (NPCTextBox.activeSelf.Equals(true))
+        {
+            NPCTextBox.SetActive(false);
+        }
+        playerTextbox.SetActive(true);
 
+       playerTextbox.transform.GetChild(1).GetComponent<Text>().text = PlayerSentences;
     }
 
     public void PlayerLeft()
     {
+        if (gotBallot)
+        {
+            if (onGround)
+            {
+                this.gameObject.transform.position += Vector3.right * 5 * Time.deltaTime;
+            }
+            else
+            {
+                this.gameObject.GetComponent<DestroyNPC>().DestroyGameObject();
+            }
+        }
+
         NPCTextBox.SetActive(false);
         playerTextbox.SetActive(false);
     }
