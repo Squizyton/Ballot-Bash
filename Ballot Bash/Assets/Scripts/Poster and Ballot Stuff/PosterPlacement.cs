@@ -12,13 +12,11 @@ public class PosterPlacement : MonoBehaviour
 
     public bool inFrontOfWall = false;
     public bool facingRight = true;
-<<<<<<< HEAD
-    public bool inTutorial = false;
 
-=======
+    public bool inTutorial = false;
+    
     public AudioSource ass;
     public AudioClip[] effects;
->>>>>>> 763bf12957f4472b35b7a1971aa03e7315b75a1f
 
     // Start is called before the first frame update
     void Start()

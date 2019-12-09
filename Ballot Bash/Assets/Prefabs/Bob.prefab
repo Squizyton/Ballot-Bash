@@ -146,6 +146,7 @@ MonoBehaviour:
   ballot: {fileID: 7933218407337789089, guid: 0f80a06a372f97e41933da655eb2368f, type: 3}
   inFrontOfWall: 0
   facingRight: 1
+  inTutorial: 0
   ass: {fileID: 0}
   effects:
   - {fileID: 8300000, guid: cf48f8ac68fecbd4ca55b82f3827ffe8, type: 3}
@@ -349,7 +350,7 @@ Camera:
   m_GameObject: {fileID: 7148516283027141477}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
