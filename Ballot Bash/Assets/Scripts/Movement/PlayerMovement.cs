@@ -109,6 +109,8 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("walking", false);
         anim.SetBool("jumping", true);
         rb2d.AddForce(Vector2.up * jumpForce);
+        this.GetComponent<PosterPlacement>().ass.clip = this.GetComponent<PosterPlacement>().effects[2];
+        this.GetComponent<PosterPlacement>().ass.Play();
 
         if (InWall)
         {
