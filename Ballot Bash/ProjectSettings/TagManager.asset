@@ -11,6 +11,9 @@ TagManager:
   - BallotDestroyer
   - Voter
   - Canvas
+  - Spawner
+  - RightSpawner
+  - LeftSpawner
   layers:
   - Default
   - TransparentFX

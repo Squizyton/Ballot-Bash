@@ -16,6 +16,8 @@ public class SpawnACar : MonoBehaviour
 
     public bool goRight, goLeft;
 
+    public int MinTimer, MaxTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,7 @@ public class SpawnACar : MonoBehaviour
 
     IEnumerator Timer()
     {
-       int timer = Random.Range(1, 8);
+       int timer = Random.Range(MinTimer, MaxTimer);
 
         Debug.Log(timer);
         yield return new WaitForSeconds(timer);
@@ -34,7 +36,7 @@ public class SpawnACar : MonoBehaviour
     }
 
 
-    void Spawn()
+    public void Spawn()
     {
 
         spawnedCar = Instantiate(Cars[Random.Range(0, Cars.Length)], transform.position, transform.rotation);

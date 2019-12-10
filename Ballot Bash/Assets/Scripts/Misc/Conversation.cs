@@ -59,6 +59,8 @@ public class Conversation : MonoBehaviour
             NPCTextBox.SetActive(true);
         }
 
+        sentenceNumber = Random.Range(0, NPC_sentences.Length);
+
         NPCTextBox.transform.GetChild(0).GetComponent<Text>().text = NPC_sentences[sentenceNumber]; 
     }
 
@@ -82,7 +84,7 @@ public class Conversation : MonoBehaviour
         {
             if (onGround)
             {
-                this.gameObject.transform.position += Vector3.right * 5 * Time.deltaTime;
+                transform.Translate(Vector2.right * Time.deltaTime);
             }
             else
             {

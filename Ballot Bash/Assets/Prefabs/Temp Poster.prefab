@@ -121,4 +121,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 0}
-  Voter: {fileID: 1605409779557057290, guid: 9c12b32d07c9b0747a24df31694a2edb, type: 3}
+  Voter: {fileID: 1605409779557057290, guid: 8b3111dc09bf1d445a17aabf55859c46, type: 3}
