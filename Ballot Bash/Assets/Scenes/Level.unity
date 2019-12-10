@@ -17219,15 +17219,15 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1204202420980105153, guid: 766e77806f30fc148b23f1587d5a8570,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5027012558283847892, guid: 766e77806f30fc148b23f1587d5a8570,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204202420980105153, guid: 766e77806f30fc148b23f1587d5a8570,
+        type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 766e77806f30fc148b23f1587d5a8570, type: 3}
@@ -51645,6 +51645,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerTextBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 2859706784715616937, guid: 531e5691ed32bf149b2541e227360737,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2859706784715616936, guid: 531e5691ed32bf149b2541e227360737,
         type: 3}
