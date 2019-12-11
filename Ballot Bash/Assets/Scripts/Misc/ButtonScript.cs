@@ -29,7 +29,7 @@ public class ButtonScript : MonoBehaviour
 
    public void Menu()
     {
-        // menu doesnt exist yet
+        SceneManager.LoadScene("MainMenu");
     }
 
 }
