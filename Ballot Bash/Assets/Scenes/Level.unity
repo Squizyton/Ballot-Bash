@@ -2227,17 +2227,18 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.data[0]
-      value: VOTING YES
+      value: I like washing windows!
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: PlayerSentences
-      value: VOTING YES
+      value: "\r\nVoter turnout in the U.S. Is Extremely low compared to other developed
+        countries. It's your job to turn that around!!! "
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -2259,6 +2260,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onGround
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[1]
+      value: I wonder how many people are going to be there?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c12b32d07c9b0747a24df31694a2edb, type: 3}
@@ -3228,17 +3239,18 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.data[0]
-      value: VOTING YES
+      value: I need to think about what I care about in this country.
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: PlayerSentences
-      value: VOTING YES
+      value: "\r\nYoung voters were most likely to identify as Democratic (44% vs
+        38% of all voters)."
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -3260,6 +3272,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onGround
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[1]
+      value: What side should I take?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[2]
+      value: These windows sure are dirty today...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c12b32d07c9b0747a24df31694a2edb, type: 3}
@@ -6076,7 +6098,7 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -6086,7 +6108,9 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: PlayerSentences
-      value: Here, take this ballot and go vote!
+      value: '
+
+        Did you know? Millennials account for 1/3 of the voting population!'
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -6108,6 +6132,21 @@ PrefabInstance:
         type: 3}
       propertyPath: onGround
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[1]
+      value: If only I could make a difference somewhere...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[2]
+      value: When's the vote happening?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[3]
+      value: If only there was a way for me to vote....
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c12b32d07c9b0747a24df31694a2edb, type: 3}
@@ -8250,6 +8289,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -6.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7783180155164794596, guid: 799480180c3efe541b83c091dc0f40f3,
+        type: 3}
+      propertyPath: goUpThisMuch
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 231257530457952694, guid: 799480180c3efe541b83c091dc0f40f3,
         type: 3}
       propertyPath: m_Offset.x
@@ -8264,11 +8308,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1.654587
-      objectReference: {fileID: 0}
-    - target: {fileID: 7783180155164794596, guid: 799480180c3efe541b83c091dc0f40f3,
-        type: 3}
-      propertyPath: goUpThisMuch
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 799480180c3efe541b83c091dc0f40f3, type: 3}
@@ -25784,7 +25823,7 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -25794,7 +25833,8 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: PlayerSentences
-      value: Me neither!
+      value: "\r\nHey, Cool thing! In 1943, Georgia became the first state to lower
+        its voting age in state and local elections from 21 to 18."
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -25816,6 +25856,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onGround
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[1]
+      value: How old do they have to be to vote nowadays?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[2]
+      value: That waiting room sure was crowded today...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c12b32d07c9b0747a24df31694a2edb, type: 3}
@@ -35191,7 +35241,7 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -35201,7 +35251,7 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: PlayerSentences
-      value: I know right?!
+      value: Fun Fact! In most places, Elections are held on a Sunday.
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -35223,6 +35273,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onGround
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[1]
+      value: What days can I vote?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[2]
+      value: New around here stranger?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c12b32d07c9b0747a24df31694a2edb, type: 3}
@@ -40402,7 +40462,7 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -40412,7 +40472,7 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: PlayerSentences
-      value: Yeah! Go make a difference!
+      value: "Did you know? Astronauts can vote!!\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -40434,6 +40494,21 @@ PrefabInstance:
         type: 3}
       propertyPath: onGround
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[1]
+      value: Know any cool facts that might get me in he voting spirit?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[2]
+      value: Nice weather we're having huh?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[3]
+      value: Voting is so cool huh?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c12b32d07c9b0747a24df31694a2edb, type: 3}
@@ -42732,7 +42807,7 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -42742,7 +42817,8 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: PlayerSentences
-      value: Go make some friends at the voting booth!
+      value: Here's a cool fact! Gerald Ford was the only president never elected
+        as president or vice-president.
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -42764,6 +42840,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onGround
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[1]
+      value: I wonder what it takes for Presidents to be voted in?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[2]
+      value: What to do for dinner tonight....
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c12b32d07c9b0747a24df31694a2edb, type: 3}
@@ -50639,17 +50725,19 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.data[0]
-      value: VOTING YES
+      value: Hurray for Voting!
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: PlayerSentences
-      value: VOTING YES
+      value: "Did you know? In the United States 2016 election, six million citizens
+        were not allowed to vote due to a felony conviction on their record, a statistic
+        which affects in 1 in 13 African Americans.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -50671,6 +50759,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onGround
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[1]
+      value: I wonder if people in prison can vote too?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[2]
+      value: Streets sure are busy today
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c12b32d07c9b0747a24df31694a2edb, type: 3}
@@ -52528,17 +52626,18 @@ PrefabInstance:
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: NPC_sentences.Array.data[0]
-      value: I cant wait to vote!
+      value: The weather is nice!
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
       propertyPath: PlayerSentences
-      value: Me neither!
+      value: "Pop Quiz! 40% of millennials identify as non-white, making them the
+        most diverse voting generation in history.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
         type: 3}
@@ -52560,6 +52659,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onGround
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[1]
+      value: I wonder what kinds of people are going to be at the vote today?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626376304870678618, guid: 9c12b32d07c9b0747a24df31694a2edb,
+        type: 3}
+      propertyPath: NPC_sentences.Array.data[2]
+      value: What movie does the wife want to see later?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c12b32d07c9b0747a24df31694a2edb, type: 3}
