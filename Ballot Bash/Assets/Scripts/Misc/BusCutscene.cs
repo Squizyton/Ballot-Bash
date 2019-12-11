@@ -39,7 +39,8 @@ public class BusCutscene : MonoBehaviour
         TheBus.GetComponent<Animator>().SetBool("ToCity", true);
         yield return new WaitForSeconds(1f);
         black.GetComponent<Animator>().SetBool("Fade", true);
-
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Level");
     }
 
 
