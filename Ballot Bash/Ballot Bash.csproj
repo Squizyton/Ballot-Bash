@@ -625,13 +625,31 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PosterWall.cs" />
+    <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\randomParticleRotation.cs" />
+    <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\ReverseNormals.cs" />
+    <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\rotation.cs" />
+    <Compile Include="Assets\Scripts\EasterEgg.cs" />
+    <Compile Include="Assets\Scripts\Misc\AI.cs" />
+    <Compile Include="Assets\Scripts\Misc\ButtonScript.cs" />
+    <Compile Include="Assets\Scripts\Misc\CarMovement.cs" />
+    <Compile Include="Assets\Scripts\Misc\Conversation.cs" />
+    <Compile Include="Assets\Scripts\Misc\DestroyNPC.cs" />
+    <Compile Include="Assets\Scripts\Misc\HealthScript.cs" />
+    <Compile Include="Assets\Scripts\Misc\PlatformUpDown.cs" />
+    <Compile Include="Assets\Scripts\Misc\SceneChanger.cs" />
+    <Compile Include="Assets\Scripts\Misc\ScoreManager.cs" />
+    <Compile Include="Assets\Scripts\Misc\SpawnACar.cs" />
+    <Compile Include="Assets\Scripts\Misc\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Movement\GoThroughWalls.cs" />
     <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Poster and Ballot Stuff\PosterBallotBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Poster and Ballot Stuff\BallotBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Poster and Ballot Stuff\PosterBehaviour.cs" />
     <Compile Include="Assets\Scripts\Poster and Ballot Stuff\PosterPlacement.cs" />
+    <Compile Include="Assets\Scripts\Poster and Ballot Stuff\PosterWall.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\martin.txt" />
+    <None Include="Assets\Particle Ribbon by Moonflower Carnivore\Shaders\Particle Alpha Blend HDR.shader" />
+    <None Include="Assets\Particle Ribbon by Moonflower Carnivore\readme_Simple_Particle_Ribbon.txt" />
     <None Include="Packages\com.unity.2d.sprite\Editor\UI\SpriteEditor\PolygonChangeShapeWindow.uxml" />
     <None Include="Packages\com.unity.2d.sprite\Editor\UI\SpriteEditor\SpriteEditor.uss" />
     <None Include="Packages\com.unity.2d.sprite\Editor\UI\SpriteEditor\SpriteFrameModuleInspector.uxml" />
